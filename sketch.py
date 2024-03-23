@@ -27,7 +27,7 @@ for xi, x in enumerate(X):
                 else:
                     color = (1, 0, 0)
                 Z[xi, yi] = color
-            z = ((1 - i) * z**4 + (7j) * z) / (2 * z**3 + 6)
+            z = ((1 - i) * (z**4) + (7 + i) * z) / (2 * (z**3) + 6)
 
 
 plt.imshow(Z, extent=(X.min(), X.max(), Y.min(), Y.max()))
