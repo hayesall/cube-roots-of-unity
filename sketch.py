@@ -10,7 +10,7 @@ Z = np.zeros((len(X), len(Y), 3))
 for xi, x in enumerate(X):
     for yi, y in enumerate(Y):
         z = complex(x, y)
-        for i in range(1, 12):
+        for i in range(1, 13):
             if abs(z) < 1.1 and abs(z) > 0.9:
                 if i == 1:
                     color = (1, 0.7, 0)
@@ -27,7 +27,8 @@ for xi, x in enumerate(X):
                 else:
                     color = (1, 0, 0)
                 Z[xi, yi] = color
-            z = ((1 - i) * (z**4) + (7 + i) * z) / (2 * (z**3) + 6)
+            z = ((1-i)*z**4+(7+i)*z)/(2*z**3+6)
+        color = (0, 0, 0)
 
 
 plt.imshow(Z, extent=(X.min(), X.max(), Y.min(), Y.max()))
