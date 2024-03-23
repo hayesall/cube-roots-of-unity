@@ -27,10 +27,11 @@ for xi, x in enumerate(X):
                 else:
                     color = (1, 0, 0)
                 Z[xi, yi] = color
-            z = ((1-i)*z**4+(7+i)*z)/(2*z**3+6)
+            z = ((1-1j)*z**4+(7+1j)*z)/(2*z**3+6)
         color = (0, 0, 0)
 
 
 plt.imshow(Z, extent=(X.min(), X.max(), Y.min(), Y.max()))
 plt.axis("off")
-plt.show()
+plt.tight_layout()
+plt.savefig("test.png", bbox_inches="tight", pad_inches=0, dpi=200)
