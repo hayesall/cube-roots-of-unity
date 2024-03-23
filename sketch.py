@@ -6,7 +6,6 @@ X = np.arange(-4.5, 7.4, 1 / 120)
 Y = np.arange(-5.2, 3.3, 1 / 120)
 Z = np.zeros((len(X), len(Y), 3))
 
-color = (0, 0, 0)
 
 for xi, x in enumerate(X):
     for yi, y in enumerate(Y):
@@ -28,8 +27,7 @@ for xi, x in enumerate(X):
                 else:
                     color = (1, 0, 0)
                 Z[xi, yi] = color
-                z = ((1 - i) * z**4 + (7j) * z) / (2 * z**3 + 6)
-        color = (0, 0, 0)
+            z = ((1 - i) * z**4 + (7j) * z) / (2 * z**3 + 6)
 
 
 plt.imshow(Z, extent=(X.min(), X.max(), Y.min(), Y.max()))
